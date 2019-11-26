@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "gb-alerts": [
+        "dist/gb-alerts"
+      ],
+      "gb-alerts/*": [
+        "dist/gb-alerts/*"
+      ]
+    }
   }
 }

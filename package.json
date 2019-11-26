@@ -6,8 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-lib": "ng test gb-alerts --browsers=ChromeHeadless --watch=false",
+    "test-lib-watch": "ng test gb-alerts --browsers=ChromeHeadless",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-gb-alerts": "ng build gb-alerts",
+    "build-gb-alerts-watch": "ng build gb-alerts watch",
+    "lint-gb-alerts": "ng lint gb-alerts",
+    "pack-gb-alerts": "cd dist/gb-alerts && npm pack"
   },
   "private": true,
   "dependencies": {
@@ -26,12 +32,13 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
+    "@angular-devkit/build-ng-packagr": "~0.10.0",
     "@angular/cli": "~7.0.2",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -40,8 +47,12 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^4.2.0",
+    "node-sass": "^4.13.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": ">=0.29.0",
+    "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
   }
