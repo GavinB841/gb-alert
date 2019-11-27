@@ -5,12 +5,10 @@ import { AlertMessage, GbAlertsService } from './gb-alerts.service';
 @Component({
   selector: 'gb-alerts',
   template: `
-      <div
-              class="alert"
+      <div class="alert"
               *ngIf="alertMessage$ | async as alertMessage"
-              [ngStyle]="{ background: alertMessage.color }"
-      >
-          <span class="closebtn" (click)="closeAlert()">&times;</span>
+              [ngStyle]="{ background: alertMessage.color }">
+          <span class="closebtn" (click)="closeAlert()"><i class="{{ alertMessage.icon }}"></i></span>
           <strong>{{ alertMessage.prefix }}!</strong> {{ alertMessage.message }}
       </div>
   `,
